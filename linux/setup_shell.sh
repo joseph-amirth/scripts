@@ -1,10 +1,13 @@
 #!/bin/bash
 
-brew install zsh which
+brew install zsh
 chsh -s $(which zsh)
 
 brew install neovim ripgrep fzf bat zoxide
 
+brew install npm
+
+rm -rf ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
